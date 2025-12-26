@@ -4,16 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stylos Smith Study | Beauty Salon en Trinidad</title>
+<title>Stylos Smith Study | Beauty Salon</title>
 
-<meta name="description" content="Stylos Smith Study Beauty Salon en Trinidad, Beni. Maquillaje profesional, balayage, pestañas, rayitos y tratamientos de belleza. Reserva por WhatsApp.">
+<meta name="description" content="Stylos Smith Study Beauty Salon en Trinidad, Beni. Maquillaje, balayage, pestañas, rayitos y belleza profesional.">
 <meta name="theme-color" content="#8b0000">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+/* RESET */
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
     font-family:'Poppins',sans-serif;
@@ -22,12 +25,10 @@ body{
     text-align:center;
 }
 
-/* HERO */
+/* HEADER */
 header{
     padding:60px 20px;
-    background:
-        radial-gradient(circle at top,#ff5c5c,#6b0000),
-        url('fondo.jpg') center/cover;
+    background:radial-gradient(circle at top,#ff5c5c,#6b0000);
 }
 
 .logo{
@@ -37,13 +38,12 @@ header{
 
 header h1{
     font-family:'Playfair Display',serif;
-    font-size:2.8em;
+    font-size:2.6em;
     margin:10px 0;
-    text-shadow:2px 2px 10px rgba(0,0,0,.7);
 }
 
 header p{
-    font-size:1.15em;
+    font-size:1.1em;
     opacity:.95;
 }
 
@@ -58,13 +58,25 @@ h2{
     margin-bottom:30px;
 }
 
-/* SERVICIOS */
+/* SERVICIOS RESPONSIVE */
 .services{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
     max-width:1100px;
     margin:auto;
+}
+
+@media(max-width:900px){
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+    .services{
+        grid-template-columns:1fr;
+    }
 }
 
 .card{
@@ -76,7 +88,7 @@ h2{
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 }
 
 .card img{
@@ -88,23 +100,7 @@ h2{
 .card h3{
     margin:18px 0;
     color:#ffe0e0;
-    font-size:1.3em;
-}
-
-/* POR QUÉ ELEGIRNOS */
-.features{
-    max-width:900px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.feature{
-    background:rgba(255,255,255,.08);
-    padding:25px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.4);
+    font-size:1.25em;
 }
 
 /* PROMO */
@@ -117,12 +113,8 @@ h2{
     box-shadow:0 15px 40px rgba(0,0,0,.7);
 }
 
-.promo h2{
-    color:#ffcccc;
-}
-
 .countdown{
-    font-size:1.5em;
+    font-size:1.4em;
     color:#ffd700;
     margin-top:15px;
     font-weight:bold;
@@ -136,9 +128,8 @@ h2{
     padding:16px 38px;
     border-radius:50px;
     text-decoration:none;
-    font-size:1.2em;
-    margin-top:30px;
-    box-shadow:0 6px 20px rgba(0,0,0,.6);
+    font-size:1.15em;
+    margin-top:25px;
 }
 
 /* MAPA */
@@ -147,7 +138,6 @@ h2{
     margin:35px auto;
     border-radius:22px;
     overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.5);
     border:3px solid #b30000;
 }
 
@@ -156,7 +146,6 @@ footer{
     background:#3a0000;
     padding:30px;
     font-size:.95em;
-    box-shadow:0 -5px 20px rgba(0,0,0,.6);
 }
 </style>
 </head>
@@ -164,9 +153,9 @@ footer{
 <body>
 
 <header>
-    <img src="logo.png" alt="Stylos Smith Study Beauty Salon" class="logo">
+    <img src="logo_Stylos_Smith-removebg-preview.png" class="logo" alt="Stylos Smith Study">
     <h1>Stylos Smith Study</h1>
-    <p>Belleza, estilo y elegancia para realzar tu imagen</p>
+    <p>Belleza, estilo y elegancia</p>
 </header>
 
 <section class="section">
@@ -177,9 +166,80 @@ footer{
         <img src="maquillaje.png">
         <h3>Maquillaje Profesional</h3>
     </div>
+
     <div class="card">
         <img src="planchado.png">
         <h3>Planchado & Peinados</h3>
     </div>
-    <di
+
+    <div class="card">
+        <img src="pestanas.png">
+        <h3>Pestañas</h3>
+    </div>
+
+    <div class="card">
+        <img src="balayage.png">
+        <h3>Balayage</h3>
+    </div>
+
+    <div class="card">
+        <img src="henna.png">
+        <h3>Rayitos</h3>
+    </div>
+</div>
+</section>
+
+<section class="promo">
+    <h2>🔥 PROMOCIÓN ESPECIAL 🔥</h2>
+    <p>Reserva hoy y obtén un <b>DESCUENTO EXCLUSIVO</b></p>
+    <div class="countdown" id="contador"></div>
+
+    <a class="btn" href="https://wa.me/59172685867" target="_blank">
+        📲 Reservar por WhatsApp
+    </a>
+</section>
+
+<section class="section">
+<h2>📍 Nuestra Ubicación</h2>
+<div class="map">
+<iframe 
+src="https://www.google.com/maps?q=Trinidad+Beni+Bolivia&output=embed"
+width="100%" height="350" style="border:0;" allowfullscreen>
+</iframe>
+</div>
+</section>
+
+<footer>
+📞 Cel. 72685867 <br>
+© 2025 Stylos Smith Study
+</footer>
+
+<script>
+const fechaFin = new Date();
+fechaFin.setDate(fechaFin.getDate() + 3);
+
+function actualizarContador(){
+    const ahora = new Date();
+    const diff = fechaFin - ahora;
+
+    if(diff <= 0){
+        document.getElementById("contador").innerHTML = "Promoción finalizada";
+        return;
+    }
+
+    const d = Math.floor(diff / (1000*60*60*24));
+    const h = Math.floor((diff / (1000*60*60)) % 24);
+    const m = Math.floor((diff / (1000*60)) % 60);
+
+    document.getElementById("contador").innerHTML =
+    `⏳ ${d} días ${h} h ${m} min`;
+}
+
+setInterval(actualizarContador,1000);
+actualizarContador();
+</script>
+
+</body>
+</html>
+
 
