@@ -12,10 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* RESET */
-*{
-    box-sizing:border-box;
-}
+*{ box-sizing:border-box; }
 
 body{
     margin:0;
@@ -58,7 +55,7 @@ h2{
     margin-bottom:30px;
 }
 
-/* SERVICIOS RESPONSIVE */
+/* SERVICIOS */
 .services{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -68,15 +65,11 @@ h2{
 }
 
 @media(max-width:900px){
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
+    .services{ grid-template-columns:repeat(2,1fr); }
 }
 
 @media(max-width:500px){
-    .services{
-        grid-template-columns:1fr;
-    }
+    .services{ grid-template-columns:1fr; }
 }
 
 .card{
@@ -87,9 +80,7 @@ h2{
     transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-}
+.card:hover{ transform:translateY(-6px); }
 
 .card img{
     width:100%;
@@ -101,6 +92,54 @@ h2{
     margin:18px 0;
     color:#ffe0e0;
     font-size:1.25em;
+}
+
+/* GALERÍA */
+.gallery{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+@media(max-width:900px){
+    .gallery{ grid-template-columns:repeat(3,1fr); }
+}
+
+@media(max-width:600px){
+    .gallery{ grid-template-columns:repeat(2,1fr); }
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.6);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
 }
 
 /* PROMO */
@@ -153,7 +192,7 @@ footer{
 <body>
 
 <header>
-    <img src="logo_Stylos_Smith-removebg-preview.png" class="logo" alt="Stylos Smith Study">
+    <img src="logo.png" class="logo" alt="Stylos Smith Study">
     <h1>Stylos Smith Study</h1>
     <p>Belleza, estilo y elegancia</p>
 </header>
@@ -166,28 +205,43 @@ footer{
         <img src="maquillaje.png">
         <h3>Maquillaje Profesional</h3>
     </div>
-
     <div class="card">
         <img src="planchado.png">
         <h3>Planchado & Peinados</h3>
     </div>
-
     <div class="card">
         <img src="pestanas.png">
         <h3>Pestañas</h3>
     </div>
-
     <div class="card">
         <img src="balayage.png">
         <h3>Balayage</h3>
     </div>
-
     <div class="card">
         <img src="henna.png">
         <h3>Rayitos</h3>
     </div>
 </div>
 </section>
+
+<section class="section">
+<h2>📸 Galería de Trabajos</h2>
+
+<div class="gallery">
+    <img src="galeria1.jpg" onclick="openModal(this.src)">
+    <img src="galeria2.jpg" onclick="openModal(this.src)">
+    <img src="galeria3.jpg" onclick="openModal(this.src)">
+    <img src="galeria4.jpg" onclick="openModal(this.src)">
+    <img src="galeria5.jpg" onclick="openModal(this.src)">
+    <img src="galeria6.jpg" onclick="openModal(this.src)">
+    <img src="galeria7.jpg" onclick="openModal(this.src)">
+    <img src="galeria8.jpg" onclick="openModal(this.src)">
+</div>
+</section>
+
+<div class="modal" id="modal" onclick="closeModal()">
+    <img id="modalImg">
+</div>
 
 <section class="promo">
     <h2>🔥 PROMOCIÓN ESPECIAL 🔥</h2>
@@ -215,6 +269,7 @@ width="100%" height="350" style="border:0;" allowfullscreen>
 </footer>
 
 <script>
+/* CONTADOR */
 const fechaFin = new Date();
 fechaFin.setDate(fechaFin.getDate() + 3);
 
@@ -237,6 +292,16 @@ function actualizarContador(){
 
 setInterval(actualizarContador,1000);
 actualizarContador();
+
+/* GALERÍA MODAL */
+function openModal(src){
+    document.getElementById("modal").style.display="flex";
+    document.getElementById("modalImg").src=src;
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
 </script>
 
 </body>
