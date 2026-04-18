@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stylos Smith Study | Salón en Trinidad</title>
+<title>Stylos Smith Study | Salón de Belleza en Trinidad Beni</title>
 
-<meta name="description" content="Reserva tu cita en Stylos Smith Study, salón de belleza en Trinidad Beni.">
+<meta name="description" content="Salón de belleza en Trinidad Beni Bolivia. Maquillaje, uñas, pestañas, balayage y más. Reserva por WhatsApp.">
 
 <style>
 body{
 margin:0;
-font-family:sans-serif;
+font-family:'Poppins',sans-serif;
 background:linear-gradient(135deg,#3a0000,#8b0000,#ff1a1a);
 color:white;
 text-align:center;
@@ -21,47 +21,67 @@ text-align:center;
 .fade{
 opacity:0;
 transform:translateY(30px);
-transition:all .8s;
+transition:.8s;
 }
-
 .show{
 opacity:1;
 transform:translateY(0);
 }
 
 /* HERO */
-.hero{
-padding:70px 20px;
+header{
+padding:60px 20px;
+background:radial-gradient(circle,#ff5c5c,#6b0000);
 }
 
-.btn{
-display:inline-block;
-background:#25D366;
-padding:15px 30px;
-border-radius:40px;
-color:white;
-text-decoration:none;
-margin-top:20px;
+/* SECCIONES */
+.section{
+padding:50px 15px;
 }
 
 /* SERVICIOS */
 .services{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-padding:20px;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+@media(max-width:700px){
+.services{grid-template-columns:1fr;}
 }
 
 .card{
 background:#7a0000;
-padding:15px;
-border-radius:15px;
+border-radius:20px;
+overflow:hidden;
 cursor:pointer;
 transition:.3s;
 }
 
 .card:hover{
 transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+/* GALERÍA */
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
 }
 
 /* RESERVA */
@@ -72,7 +92,7 @@ margin:20px;
 border-radius:20px;
 }
 
-select, input{
+select,input{
 width:90%;
 padding:12px;
 margin:10px;
@@ -80,7 +100,18 @@ border-radius:10px;
 border:none;
 }
 
-/* BOTÓN FLOTANTE */
+/* BOTONES */
+.btn{
+display:inline-block;
+background:#25D366;
+padding:15px 30px;
+border-radius:40px;
+color:white;
+text-decoration:none;
+margin-top:20px;
+}
+
+/* FLOAT */
 .float{
 position:fixed;
 bottom:20px;
@@ -89,29 +120,81 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:22px;
 text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.5);
+font-size:22px;
+}
+
+/* FOOTER */
+footer{
+background:#3a0000;
+padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero fade">
-<h1>Salón de Belleza en Trinidad</h1>
-<p>Reserva tu cita en segundos</p>
+<header class="fade">
+<h1>Salón de Belleza en Trinidad Beni</h1>
+<p>Stylos Smith Study - Belleza profesional</p>
+</header>
+
+<!-- TEXTO SEO -->
+<section class="section fade">
+<p>
+Stylos Smith Study es un salón de belleza en Trinidad Beni Bolivia especializado en maquillaje, uñas, pestañas, peinados y balayage.
+</p>
 </section>
 
 <!-- SERVICIOS -->
-<section class="services fade">
-<div class="card" onclick="seleccionar('Maquillaje')">Maquillaje</div>
-<div class="card" onclick="seleccionar('Peinados')">Peinados</div>
-<div class="card" onclick="seleccionar('Pestañas')">Pestañas</div>
-<div class="card" onclick="seleccionar('Uñas')">Uñas</div>
-<div class="card" onclick="seleccionar('Balayage')">Balayage</div>
-<div class="card" onclick="seleccionar('Facial')">Facial</div>
+<section class="section fade">
+<h2>✨ Servicios</h2>
+
+<div class="services">
+
+<div class="card" onclick="seleccionar('Maquillaje')">
+<img src="maquillajes.png">
+<h3>Maquillaje</h3>
+</div>
+
+<div class="card" onclick="seleccionar('Peinados')">
+<img src="Planchados.png">
+<h3>Peinados</h3>
+</div>
+
+<div class="card" onclick="seleccionar('Pestañas')">
+<img src="Pestañass.png">
+<h3>Pestañas</h3>
+</div>
+
+<div class="card" onclick="seleccionar('Facial')">
+<img src="limpieza.png">
+<h3>Facial</h3>
+</div>
+
+<div class="card" onclick="seleccionar('Balayage')">
+<img src="Rayitos.png">
+<h3>Balayage</h3>
+</div>
+
+<div class="card" onclick="seleccionar('Uñas')">
+<img src="Uñas.png">
+<h3>Uñas</h3>
+</div>
+
+</div>
+</section>
+
+<!-- GALERÍA -->
+<section class="section fade">
+<h2>📸 Trabajos</h2>
+
+<div class="gallery">
+<img src="cli001.jpg">
+<img src="cli002.jpg">
+<img src="cli003.jpg">
+<img src="cli004.jpg">
+</div>
 </section>
 
 <!-- RESERVA -->
@@ -119,13 +202,13 @@ box-shadow:0 5px 15px rgba(0,0,0,.5);
 <h2>📅 Reserva tu cita</h2>
 
 <select id="servicio">
-<option value="">Selecciona servicio</option>
+<option value="">Servicio</option>
 <option>Maquillaje</option>
 <option>Peinados</option>
 <option>Pestañas</option>
-<option>Uñas</option>
-<option>Balayage</option>
 <option>Facial</option>
+<option>Balayage</option>
+<option>Uñas</option>
 </select>
 
 <input type="date" id="fecha">
@@ -134,27 +217,38 @@ box-shadow:0 5px 15px rgba(0,0,0,.5);
 <a class="btn" onclick="reservar()">Confirmar por WhatsApp</a>
 </section>
 
+<!-- MAPA -->
+<section class="section fade">
+<h2>📍 Ubicación</h2>
+
+<iframe src="https://www.google.com/maps?q=Trinidad+Beni+Bolivia&output=embed"
+width="100%" height="300"></iframe>
+</section>
+
+<footer>
+© 2026 Stylos Smith Study
+</footer>
+
 <!-- BOTÓN FLOTANTE -->
 <a class="float" href="https://wa.me/59172685867">💬</a>
 
 <script>
 
-/* ANIMACIONES SCROLL */
+/* ANIMACIONES */
 const faders = document.querySelectorAll('.fade');
 
-window.addEventListener('scroll', () => {
-faders.forEach(el => {
-const top = el.getBoundingClientRect().top;
-if(top < window.innerHeight - 50){
+window.addEventListener('scroll', ()=>{
+faders.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight - 50){
 el.classList.add('show');
 }
 });
 });
 
-/* SELECCIONAR SERVICIO */
+/* SELECCIÓN */
 function seleccionar(serv){
 document.getElementById("servicio").value = serv;
-window.scrollTo({top:500, behavior:'smooth'});
+window.scrollTo({top:1000, behavior:'smooth'});
 }
 
 /* RESERVA */
@@ -164,18 +258,16 @@ let fecha = document.getElementById("fecha").value;
 let hora = document.getElementById("hora").value;
 
 if(!serv || !fecha || !hora){
-alert("Completa todos los campos");
+alert("Completa los datos");
 return;
 }
 
-let mensaje = `Hola, quiero reservar:
+let mensaje = `Hola quiero reservar:
 Servicio: ${serv}
 Fecha: ${fecha}
 Hora: ${hora}`;
 
-let url = "https://wa.me/59172685867?text=" + encodeURIComponent(mensaje);
-
-window.open(url, '_blank');
+window.open("https://wa.me/59172685867?text=" + encodeURIComponent(mensaje));
 }
 </script>
 
