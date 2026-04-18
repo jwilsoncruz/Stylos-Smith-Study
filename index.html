@@ -4,224 +4,180 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stylos Smith Study | Salón de Belleza en Trinidad Beni Bolivia</title>
+<title>Stylos Smith Study | Salón en Trinidad</title>
 
-<meta name="description" content="Salón de belleza en Trinidad Beni Bolivia. Maquillaje, uñas, pestañas, balayage, peinados y más. Reserva tu cita por WhatsApp.">
-
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#8b0000">
-
-<!-- SEO LOCAL -->
-<meta name="geo.region" content="BO-B">
-<meta name="geo.placename" content="Trinidad, Beni">
-
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Stylos Smith Study - Salón en Trinidad">
-<meta property="og:description" content="Transforma tu look hoy. Reserva por WhatsApp">
-<meta property="og:image" content="logo2.png">
-
-<!-- SCHEMA -->
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BeautySalon",
- "name": "Stylos Smith Study",
- "address": {
-   "@type": "PostalAddress",
-   "addressLocality": "Trinidad",
-   "addressRegion": "Beni",
-   "addressCountry": "Bolivia"
- },
- "telephone": "+59172685867"
-}
-</script>
+<meta name="description" content="Reserva tu cita en Stylos Smith Study, salón de belleza en Trinidad Beni.">
 
 <style>
 body{
 margin:0;
-font-family:'Poppins',sans-serif;
+font-family:sans-serif;
 background:linear-gradient(135deg,#3a0000,#8b0000,#ff1a1a);
 color:white;
 text-align:center;
 }
 
+/* ANIMACIONES */
+.fade{
+opacity:0;
+transform:translateY(30px);
+transition:all .8s;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
 /* HERO */
 .hero{
 padding:70px 20px;
-background:radial-gradient(circle,#ff5c5c,#6b0000);
 }
 
-.hero h1{
-font-size:2.5em;
-margin-bottom:10px;
-}
-
-.hero p{
-font-size:1.1em;
-}
-
-/* BOTÓN */
 .btn{
 display:inline-block;
 background:#25D366;
-padding:16px 35px;
-border-radius:50px;
+padding:15px 30px;
+border-radius:40px;
 color:white;
 text-decoration:none;
 margin-top:20px;
-font-size:1.1em;
-}
-
-/* SECCIONES */
-.section{
-padding:50px 15px;
 }
 
 /* SERVICIOS */
 .services{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-max-width:1000px;
-margin:auto;
-}
-
-@media(max-width:700px){
-.services{grid-template-columns:1fr;}
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:20px;
 }
 
 .card{
 background:#7a0000;
-border-radius:20px;
 padding:15px;
-}
-
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
 border-radius:15px;
+cursor:pointer;
+transition:.3s;
 }
 
-/* GALERÍA */
-.gallery{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
+.card:hover{
+transform:scale(1.05);
 }
 
-.gallery img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:12px;
+/* RESERVA */
+.reserva{
+background:#1a0000;
+padding:30px;
+margin:20px;
+border-radius:20px;
 }
 
-/* TESTIMONIOS */
-.testimonials{
-background:#2a0000;
-padding:40px;
+select, input{
+width:90%;
+padding:12px;
+margin:10px;
+border-radius:10px;
+border:none;
 }
 
+/* BOTÓN FLOTANTE */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.5);
+}
 </style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<section class="hero">
-<h1>Salón de Belleza en Trinidad Beni</h1>
-<p>Maquillaje, uñas, pestañas y cambios de look profesionales</p>
-
-<a class="btn" href="https://wa.me/59172685867?text=Hola%20quiero%20reservar%20una%20cita">
-📲 Reservar por WhatsApp
-</a>
-</section>
-
-<!-- TEXTO SEO IA -->
-<section class="section">
-<p>
-Stylos Smith Study es un salón de belleza en Trinidad Beni Bolivia especializado en maquillaje profesional, peinados, uñas, pestañas, balayage y tratamientos faciales. Ofrecemos servicios para eventos, bodas y ocasiones especiales con atención personalizada.
-</p>
+<section class="hero fade">
+<h1>Salón de Belleza en Trinidad</h1>
+<p>Reserva tu cita en segundos</p>
 </section>
 
 <!-- SERVICIOS -->
-<section class="section">
-<h2>✨ Nuestros Servicios</h2>
-
-<div class="services">
-<div class="card">
-<img src="maquillajes.png" alt="Maquillaje Trinidad">
-<h3>Maquillaje</h3>
-</div>
-
-<div class="card">
-<img src="Planchados.png" alt="Peinados Trinidad">
-<h3>Peinados</h3>
-</div>
-
-<div class="card">
-<img src="Pestañass.png" alt="Pestañas Trinidad">
-<h3>Pestañas</h3>
-</div>
-
-<div class="card">
-<img src="Uñas.png" alt="Uñas Trinidad">
-<h3>Manicura</h3>
-</div>
-
-<div class="card">
-<img src="Rayitos.png" alt="Balayage Trinidad">
-<h3>Balayage</h3>
-</div>
-
-<div class="card">
-<img src="limpieza.png" alt="Limpieza facial Trinidad">
-<h3>Facial</h3>
-</div>
-</div>
+<section class="services fade">
+<div class="card" onclick="seleccionar('Maquillaje')">Maquillaje</div>
+<div class="card" onclick="seleccionar('Peinados')">Peinados</div>
+<div class="card" onclick="seleccionar('Pestañas')">Pestañas</div>
+<div class="card" onclick="seleccionar('Uñas')">Uñas</div>
+<div class="card" onclick="seleccionar('Balayage')">Balayage</div>
+<div class="card" onclick="seleccionar('Facial')">Facial</div>
 </section>
 
-<!-- GALERÍA -->
-<section class="section">
-<h2>📸 Trabajos Reales</h2>
+<!-- RESERVA -->
+<section class="reserva fade">
+<h2>📅 Reserva tu cita</h2>
 
-<div class="gallery">
-<img src="cli001.jpg" alt="">
-<img src="cli002.jpg" alt="">
-<img src="cli003.jpg" alt="">
-<img src="cli004.jpg" alt="">
-</div>
+<select id="servicio">
+<option value="">Selecciona servicio</option>
+<option>Maquillaje</option>
+<option>Peinados</option>
+<option>Pestañas</option>
+<option>Uñas</option>
+<option>Balayage</option>
+<option>Facial</option>
+</select>
+
+<input type="date" id="fecha">
+<input type="time" id="hora">
+
+<a class="btn" onclick="reservar()">Confirmar por WhatsApp</a>
 </section>
 
-<!-- TESTIMONIOS -->
-<section class="testimonials">
-<h2>💬 Opiniones</h2>
-<p>"Excelente atención y resultados"</p>
-<p>"El mejor salón de Trinidad"</p>
-<p>"Muy profesional"</p>
-</section>
+<!-- BOTÓN FLOTANTE -->
+<a class="float" href="https://wa.me/59172685867">💬</a>
 
-<!-- CTA -->
-<section class="section">
-<h2>🔥 Agenda tu cita ahora</h2>
+<script>
 
-<a class="btn" href="https://wa.me/59172685867?text=Quiero%20agendar%20una%20cita">
-Reservar ahora
-</a>
-</section>
+/* ANIMACIONES SCROLL */
+const faders = document.querySelectorAll('.fade');
 
-<!-- MAPA -->
-<section class="section">
-<h2>📍 Ubicación</h2>
+window.addEventListener('scroll', () => {
+faders.forEach(el => {
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 50){
+el.classList.add('show');
+}
+});
+});
 
-<iframe src="https://www.google.com/maps?q=Trinidad+Beni+Bolivia&output=embed"
-width="100%" height="300"></iframe>
-</section>
+/* SELECCIONAR SERVICIO */
+function seleccionar(serv){
+document.getElementById("servicio").value = serv;
+window.scrollTo({top:500, behavior:'smooth'});
+}
 
-<footer style="background:#3a0000;padding:20px;">
-© 2026 Stylos Smith Study
-</footer>
+/* RESERVA */
+function reservar(){
+let serv = document.getElementById("servicio").value;
+let fecha = document.getElementById("fecha").value;
+let hora = document.getElementById("hora").value;
+
+if(!serv || !fecha || !hora){
+alert("Completa todos los campos");
+return;
+}
+
+let mensaje = `Hola, quiero reservar:
+Servicio: ${serv}
+Fecha: ${fecha}
+Hora: ${hora}`;
+
+let url = "https://wa.me/59172685867?text=" + encodeURIComponent(mensaje);
+
+window.open(url, '_blank');
+}
+</script>
 
 </body>
 </html>
