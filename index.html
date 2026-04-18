@@ -4,389 +4,196 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Salón de Belleza en Trinidad Beni | Stylos Smith Study</title>
 
-<title>Stylos Smith Study | Beauty Salon</title>
+<meta name="description" content="Reserva en Stylos Smith Study, salón de belleza en Trinidad Beni. Maquillaje, uñas, pestañas, balayage y más. Atención profesional. Agenda por WhatsApp.">
 
-<meta name="description" content="Stylos Smith Study Beauty Salon en Trinidad, Beni. Maquillaje, peinados, pestañas, balayage y rayitos profesionales.">
+<meta name="robots" content="index, follow">
 <meta name="theme-color" content="#8b0000">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- GEO SEO -->
+<meta name="geo.region" content="BO-B">
+<meta name="geo.placename" content="Trinidad, Beni">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="Salón de Belleza en Trinidad | Stylos Smith Study">
+<meta property="og:description" content="Transforma tu look hoy. Reserva por WhatsApp.">
+<meta property="og:image" content="logo2.png">
+
+<!-- SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BeautySalon",
+ "name": "Stylos Smith Study",
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Trinidad",
+   "addressRegion": "Beni",
+   "addressCountry": "Bolivia"
+ },
+ "telephone": "+59172685867"
+}
+</script>
 
 <style>
-*{ box-sizing:border-box; }
-.social i{
-    font-family: "Font Awesome 5 Brands";
-    font-weight: 400;
-}
-
-
 body{
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#3a0000,#8b0000,#ff1a1a);
-    color:#fff;
-    text-align:center;
+margin:0;
+font-family:sans-serif;
+background:#111;
+color:white;
+text-align:center;
 }
 
-/* HEADER */
-header{
-    padding:60px 20px;
-    background:radial-gradient(circle at top,#ff5c5c,#6b0000);
+/* HERO */
+.hero{
+padding:80px 20px;
+background:linear-gradient(135deg,#3a0000,#ff1a1a);
 }
 
-.logo{
-    width:140px;
-    margin-bottom:15px;
+.hero h1{
+font-size:2.3em;
+margin-bottom:10px;
 }
 
-header h1{
-    font-family:'Playfair Display',serif;
-    font-size:2.6em;
-    margin:10px 0;
-}
-
-header p{
-    font-size:1.1em;
-    opacity:.95;
-}
-
-/* SECCIONES */
-.section{
-    padding:50px 15px;
-}
-
-h2{
-    font-family:'Playfair Display',serif;
-    color:#ffd6d6;
-    margin-bottom:30px;
-}
-
-/* SERVICIOS – CORREGIDO */
-.services{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    max-width:1200px;
-    margin:auto;
-}
-
-@media(max-width:1100px){
-    .services{ grid-template-columns:repeat(3,1fr); }
-}
-
-@media(max-width:800px){
-    .services{ grid-template-columns:repeat(2,1fr); }
-}
-
-@media(max-width:500px){
-    .services{ grid-template-columns:1fr; }
-}
-
-.card{
-    background:linear-gradient(180deg,#7a0000,#b30000);
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,.6);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card h3{
-    margin:18px 0;
-    color:#ffe0e0;
-    font-size:1.2em;
-}
-
-/* GALERÍA */
-.gallery{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-@media(max-width:900px){
-    .gallery{ grid-template-columns:repeat(3,1fr); }
-}
-
-@media(max-width:600px){
-    .gallery{ grid-template-columns:repeat(2,1fr); }
-}
-
-.gallery img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.6);
-    cursor:pointer;
-    transition:.3s;
-}
-
-.gallery img:hover{
-    transform:scale(1.05);
-}
-
-/* MODAL */
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.85);
-    justify-content:center;
-    align-items:center;
-    z-index:999;
-}
-
-.modal img{
-    max-width:90%;
-    max-height:90%;
-    border-radius:20px;
-}
-
-/* PROMO */
-.promo{
-    background:linear-gradient(180deg,#8b0000,#3a0000);
-    border-radius:30px;
-    padding:35px 20px;
-    max-width:650px;
-    margin:50px auto;
-    box-shadow:0 15px 40px rgba(0,0,0,.7);
-}
-
-.countdown{
-    font-size:1.4em;
-    color:#ffd700;
-    margin-top:15px;
-    font-weight:bold;
+.hero p{
+opacity:.9;
 }
 
 /* BOTÓN */
 .btn{
-    display:inline-block;
-    background:linear-gradient(135deg,#25D366,#128C7E);
-    color:#fff;
-    padding:16px 38px;
-    border-radius:50px;
-    text-decoration:none;
-    font-size:1.15em;
-    margin-top:25px;
+display:inline-block;
+background:#25D366;
+padding:18px 40px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-size:1.2em;
+margin-top:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.5);
 }
 
-/* MAPA */
-.map{
-    max-width:900px;
-    margin:35px auto;
-    border-radius:22px;
-    overflow:hidden;
-    border:3px solid #b30000;
+/* BENEFICIOS */
+.benefits{
+padding:50px 20px;
+background:#1a0000;
 }
 
-/* FOOTER */
-footer{
-    background:#3a0000;
-    padding:30px;
-    font-size:.95em;
+.benefits div{
+margin:15px 0;
+font-size:1.1em;
 }
 
-	/* REDES SOCIALES */
-.social{
-    display:flex;
-    justify-content:center;
-    gap:18px;
-    margin-bottom:15px;
+/* SERVICIOS */
+.services{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:20px;
 }
 
-.social a{
-    width:45px;
-    height:45px;
-    background:#b30000;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    color:white;
-    font-size:1.3em;
-    transition:.3s;
-    text-decoration:none;
+.card{
+background:#2a0000;
+padding:20px;
+border-radius:15px;
 }
 
-.social a:hover{
-    background:#ff1a1a;
-    transform:translateY(-4px);
+/* TESTIMONIOS */
+.testimonials{
+padding:50px 20px;
+background:#140000;
 }
 
+.testimonials p{
+font-style:italic;
+opacity:.9;
+}
+
+/* CTA FINAL */
+.cta{
+padding:60px 20px;
+background:#ff1a1a;
+}
+
+.cta h2{
+margin-bottom:20px;
+}
 </style>
 </head>
 
 <body>
 
-<header>
-    <img src="logo2.png" class="logo" alt="Stylos Smith Study">
-    <h1>Stylos Smith Study</h1>
-    <p>Belleza, Estilo y Elegancia</p>
-</header>
+<!-- HERO -->
+<section class="hero">
+<h1>Salón de Belleza en Trinidad Beni</h1>
+<p>Maquillaje, uñas, pestañas y más con acabado profesional</p>
 
-<section class="section">
-<h2>✨ Nuestros Servicios ✨</h2>
+<a class="btn" href="https://wa.me/59172685867?text=Hola%20quiero%20reservar%20una%20cita%20en%20Stylos%20Smith%20Study">
+📲 Reservar por WhatsApp
+</a>
+</section>
+
+<!-- SEO IA -->
+<section style="padding:30px;">
+<p>
+Stylos Smith Study es un salón de belleza en Trinidad Beni Bolivia especializado en maquillaje profesional, peinados, uñas, pestañas y balayage. Ofrecemos atención personalizada para eventos, bodas y cambios de look.
+</p>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="benefits">
+<h2>¿Por qué elegirnos?</h2>
+<div>✔ Atención profesional</div>
+<div>✔ Resultados modernos y elegantes</div>
+<div>✔ Productos de calidad</div>
+<div>✔ Ubicación en Trinidad</div>
+</section>
+
+<!-- SERVICIOS -->
+<section>
+<h2>Servicios</h2>
 
 <div class="services">
-    <div class="card">
-        <img src="maquillajes.png">
-        <h3>Maquillaje</h3>
-    </div>
-    <div class="card">
-        <img src="Planchados.png">
-        <h3>Planchado & Peinados</h3>
-    </div>
-    <div class="card">
-        <img src="Pestañass.png">
-        <h3>Pestañas</h3>
-    </div>
-    <div class="card">
-        <img src="limpieza.png">
-        <h3>Limpieza facial</h3>
-    </div>
-    <div class="card">
-        <img src="Cortes.png">
-        <h3>Cortes</h3>
-    </div>
-    <div class="card">
-        <img src="Rayitos.png">
-        <h3>Balayage</h3>
-    </div>
-    <div class="card">
-        <img src="Uñas.png">
-        <h3>Manicura</h3>
-    </div>
-    <div class="card">
-        <img src="cejas.png">
-        <h3>Henna</h3>
-    </div>
-    <div class="card">
-        <img src="Pedicura.png">
-        <h3>Pedicura</h3>
-    </div>
+<div class="card">Maquillaje Profesional</div>
+<div class="card">Peinados y Planchado</div>
+<div class="card">Pestañas</div>
+<div class="card">Balayage</div>
+<div class="card">Uñas</div>
+<div class="card">Limpieza Facial</div>
 </div>
 </section>
 
-<section class="section">
-<h2>📸 Galería de Trabajos</h2>
+<!-- TESTIMONIOS -->
+<section class="testimonials">
+<h2>Clientes felices</h2>
 
-<div class="gallery">
-    <img src="cli001.jpg" onclick="openModal(this.src)">
-    <img src="cli002.jpg" onclick="openModal(this.src)">
-    <img src="cli003.jpg" onclick="openModal(this.src)">
-    <img src="cli004.jpg" onclick="openModal(this.src)">
-    <img src="cli005.jpg" onclick="openModal(this.src)">
-    <img src="cli006.jpg" onclick="openModal(this.src)">
-    <img src="cli007.jpg" onclick="openModal(this.src)">
-    <img src="cli008.jpg" onclick="openModal(this.src)">
-</div>
+<p>"Me encantó el resultado, súper recomendado"</p>
+<p>"El mejor salón en Trinidad"</p>
+<p>"Muy profesional y excelente atención"</p>
 </section>
 
-<div class="modal" id="modal" onclick="closeModal()">
-    <img id="modalImg">
-</div>
+<!-- CTA FINAL -->
+<section class="cta">
+<h2>Agenda tu cita ahora</h2>
 
-<section class="promo">
-    <h2>🔥 PROMOCIÓN ESPECIAL 🔥</h2>
-    <p>Reserva hoy y obtén un <b>DESCUENTO EXCLUSIVO</b></p>
-    <div class="countdown" id="contador"></div>
-
-    <a class="btn" href="https://wa.me/59172685867/?text=Llego%20desde%20la%20web%20solicito%20informacion%20sobre.." target="_blank">
-        📲 Reservar por WhatsApp
-    </a>
+<a class="btn" href="https://wa.me/59172685867?text=Hola%20quiero%20agendar%20una%20cita">
+Reservar ahora
+</a>
 </section>
 
-<section class="section">
-<h2>📍 Nuestra Ubicación</h2>
-<div class="map">
+<!-- MAPA -->
+<section style="padding:20px;">
+<h2>Ubicación</h2>
+
 <iframe 
 src="https://www.google.com/maps?q=Trinidad+Beni+Bolivia&output=embed"
-width="100%" height="350" style="border:0;" allowfullscreen>
+width="100%" height="300" style="border:0;">
 </iframe>
-</div>
 </section>
 
-<footer>
-    <div class="social">
-        <a href="https://www.facebook.com/StyloSmithEstilista/" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://wa.me/59172685867/?text=Llego%20desde%20la%20web%20solicito%20informacion%20sobre.." target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.tiktok.com/" target="_blank">
-            <i class="fab fa-tiktok"></i>
-        </a>
-        <a href="https://www.youtube.com/" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
-    </div>
-
-    <p style="margin-top:20px;">
-        © Derechos Reservados 2026 <br>
-        <a href="https://wa.link/c6en1o" target="_blank" style="color:#ffd6d6;">
-            JEDIs Web Solutions
-        </a>
-    </p>
+<footer style="padding:20px;background:#000;">
+© 2026 Stylos Smith Study
 </footer>
-
-
-<script>
-/* CONTADOR */
-const fechaFin = new Date();
-fechaFin.setDate(fechaFin.getDate() + 3);
-
-function actualizarContador(){
-    const ahora = new Date();
-    const diff = fechaFin - ahora;
-
-    if(diff <= 0){
-        document.getElementById("contador").innerHTML = "Promoción finalizada";
-        return;
-    }
-
-    const d = Math.floor(diff / (1000*60*60*24));
-    const h = Math.floor((diff / (1000*60*60)) % 24);
-    const m = Math.floor((diff / (1000*60)) % 60);
-
-    document.getElementById("contador").innerHTML =
-    `⏳ ${d} días ${h} h ${m} min`;
-}
-
-setInterval(actualizarContador,1000);
-actualizarContador();
-
-/* GALERÍA MODAL */
-function openModal(src){
-    document.getElementById("modal").style.display="flex";
-    document.getElementById("modalImg").src=src;
-}
-
-function closeModal(){
-    document.getElementById("modal").style.display="none";
-}
-</script>
 
 </body>
 </html>
-
-
-
