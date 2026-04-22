@@ -4,37 +4,63 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stylos Smith Study | Salón de Belleza en Trinidad Beni</title>
+<title>Stylos Smith Study | Salón de Belleza #1 en Trinidad Beni Bolivia</title>
 
-<meta name="description" content="Salón de belleza en Trinidad Beni Bolivia. Maquillaje, uñas, pestañas, balayage y más. Reserva por WhatsApp.">
+<meta name="description" content="Reserva en Stylos Smith Study, salón de belleza líder en Trinidad Beni Bolivia. Expertos en balayage, rayitos, uñas, pestañas y maquillaje profesional. Agenda fácil por WhatsApp.">
+<meta name="robots" content="index, follow">
+
+<!-- SEO GEO -->
+<meta name="geo.region" content="BO-B">
+<meta name="geo.placename" content="Trinidad, Beni Bolivia">
+
+<!-- SCHEMA PRO -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BeautySalon",
+"name": "Stylos Smith Study",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Trinidad",
+"addressRegion": "Beni",
+"addressCountry": "BO"
+},
+"telephone": "+59172685867",
+"openingHours": "Mo-Fr 09:00-19:00",
+"priceRange": "$$"
+}
+</script>
 
 <style>
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
-background:linear-gradient(135deg,#3a0000,#8b0000,#ff1a1a);
+background:linear-gradient(135deg,#2b0000,#8b0000,#ff1a1a);
 color:white;
 text-align:center;
 }
 
-/* ANIMACIONES MEJORADAS */
+/* ANIMACIONES PRO */
 .fade{
 opacity:0;
-transform:translateY(40px) scale(0.95);
-transition: all .8s cubic-bezier(.2,.8,.2,1);
+transform:translateY(50px);
+transition:1s;
 }
 .show{
 opacity:1;
-transform:translateY(0) scale(1);
+transform:translateY(0);
 }
 
 /* HERO */
 header{
-padding:60px 20px;
-background:radial-gradient(circle,#ff5c5c,#6b0000);
+padding:70px 20px;
+background:radial-gradient(circle,#ff4d4d,#4d0000);
 }
 
-/* SECCIONES */
+h1{
+font-size:28px;
+}
+
 .section{
 padding:50px 15px;
 }
@@ -42,26 +68,23 @@ padding:50px 15px;
 /* SERVICIOS */
 .services{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 max-width:1100px;
 margin:auto;
 }
 
-@media(max-width:700px){
-.services{grid-template-columns:1fr;}
-}
-
 .card{
-background:#7a0000;
+background:#6b0000;
 border-radius:20px;
 overflow:hidden;
-cursor:pointer;
 transition:.3s;
+cursor:pointer;
 }
 
 .card:hover{
-transform:scale(1.05);
+transform:scale(1.07);
+box-shadow:0 0 20px #ff4d4d;
 }
 
 .card img{
@@ -70,26 +93,25 @@ height:200px;
 object-fit:cover;
 }
 
-/* GALERÍA */
+/* GALERIA */
 .gallery{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
 gap:10px;
 }
 
 .gallery img{
 width:100%;
-height:160px;
-object-fit:cover;
 border-radius:10px;
 }
 
-/* RESERVA */
+/* RESERVA PRO */
 .reserva{
-background:#1a0000;
+background:#140000;
 padding:30px;
 margin:20px;
 border-radius:20px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
 }
 
 select,input{
@@ -100,33 +122,38 @@ border-radius:10px;
 border:none;
 }
 
-/* BOTONES */
 .btn{
-display:inline-block;
 background:#25D366;
-padding:15px 30px;
-border-radius:40px;
+padding:15px 25px;
+border-radius:30px;
 color:white;
 text-decoration:none;
-margin-top:20px;
+display:inline-block;
+margin-top:15px;
+font-weight:bold;
 }
 
-/* FLOAT */
+/* FLOAT PRO */
 .float{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-color:white;
-padding:15px;
+padding:18px;
 border-radius:50%;
-text-decoration:none;
 font-size:22px;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+animation:pulse 2s infinite;
 }
 
-/* FOOTER */
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
 footer{
-background:#3a0000;
+background:#2b0000;
 padding:20px;
 }
 </style>
@@ -135,42 +162,21 @@ padding:20px;
 <body>
 
 <header class="fade">
-<h1>Salón de Belleza en Trinidad Beni</h1>
-<p>Stylos Smith Study - Belleza profesional</p>
+<h1>Salón de Belleza en Trinidad Beni Bolivia</h1>
+<p>Balayage • Uñas • Pestañas • Maquillaje Profesional</p>
 </header>
 
-<!-- TEXTO SEO -->
 <section class="section fade">
+<h2>Stylos Smith Study</h2>
 <p>
-Stylos Smith Study es un salón de belleza en Trinidad Beni Bolivia especializado en maquillaje, uñas, pestañas, peinados y balayage.
+Especialistas en belleza moderna en Trinidad Beni. Transformamos tu imagen con técnicas profesionales en balayage, rayitos, uñas acrílicas, pestañas y maquillaje.
 </p>
 </section>
 
-<!-- SERVICIOS -->
 <section class="section fade">
 <h2>✨ Servicios</h2>
 
 <div class="services">
-
-<div class="card" onclick="seleccionar('Maquillaje')">
-<img src="maquillajes.png">
-<h3>Maquillaje</h3>
-</div>
-
-<div class="card" onclick="seleccionar('Peinados')">
-<img src="Planchados.png">
-<h3>Peinados</h3>
-</div>
-
-<div class="card" onclick="seleccionar('Pestañas')">
-<img src="Pestañass.png">
-<h3>Pestañas</h3>
-</div>
-
-<div class="card" onclick="seleccionar('Facial')">
-<img src="limpieza.png">
-<h3>Facial</h3>
-</div>
 
 <div class="card" onclick="seleccionar('Balayage')">
 <img src="Rayitos.png">
@@ -182,12 +188,21 @@ Stylos Smith Study es un salón de belleza en Trinidad Beni Bolivia especializad
 <h3>Uñas</h3>
 </div>
 
+<div class="card" onclick="seleccionar('Pestañas')">
+<img src="Pestañass.png">
+<h3>Pestañas</h3>
+</div>
+
+<div class="card" onclick="seleccionar('Maquillaje')">
+<img src="maquillajes.png">
+<h3>Maquillaje</h3>
+</div>
+
 </div>
 </section>
 
-<!-- GALERÍA -->
 <section class="section fade">
-<h2>📸 Trabajos</h2>
+<h2>📸 Resultados reales</h2>
 
 <div class="gallery">
 <img src="cli001.jpg">
@@ -197,41 +212,29 @@ Stylos Smith Study es un salón de belleza en Trinidad Beni Bolivia especializad
 </div>
 </section>
 
-<!-- RESERVA -->
 <section class="reserva fade">
-<h2>📅 Reserva tu cita</h2>
+<h2>📅 Agenda tu cita</h2>
 
 <select id="servicio">
-<option value="">Servicio</option>
-<option>Rayitos</option>
+<option value="">Selecciona servicio</option>
 <option>Balayage</option>
-<option>Manicura</option>
-<option>Pedicura</option>  
-<option>Maquillaje</option>
-<option>Peinados</option>
+<option>Uñas</option>
 <option>Pestañas</option>
-<option>Facial</option>
+<option>Maquillaje</option>
 </select>
 
 <input type="date" id="fecha">
 <input type="time" id="hora">
 
-<a class="btn" onclick="reservar()">Confirmar por WhatsApp</a>
-</section>
+<p id="msg"></p>
 
-<!-- MAPA -->
-<section class="section fade">
-<h2>📍 Ubicación</h2>
-
-<iframe src="https://www.google.com/maps?q=Trinidad+Beni+Bolivia&output=embed"
-width="100%" height="300"></iframe>
+<a class="btn" onclick="reservar()">Reservar por WhatsApp</a>
 </section>
 
 <footer>
-© 2026 Stylos Smith Study
+© 2026 Stylos Smith Study | Trinidad Beni Bolivia
 </footer>
 
-<!-- BOTÓN FLOTANTE -->
 <a class="float" href="https://wa.me/59172685867">💬</a>
 
 <script>
@@ -239,44 +242,65 @@ width="100%" height="300"></iframe>
 /* ANIMACIONES */
 const faders = document.querySelectorAll('.fade');
 
-function mostrarElementos(){
-  faders.forEach(el=>{
-    if(el.getBoundingClientRect().top < window.innerHeight - 50){
-      el.classList.add('show');
-    }
-  });
+function mostrar(){
+faders.forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight - 50){
+el.classList.add('show');
+}
+});
+}
+window.addEventListener('scroll', mostrar);
+window.addEventListener('load', mostrar);
+
+/* AUTO SELECCIÓN */
+function seleccionar(s){
+document.getElementById("servicio").value = s;
+window.scrollTo({top:1000,behavior:'smooth'});
 }
 
-// SCROLL
-window.addEventListener('scroll', mostrarElementos);
-
-// 👇 SOLUCIÓN CLAVE: AL CARGAR
-window.addEventListener('load', mostrarElementos);
-
-/* SELECCIÓN */
-function seleccionar(serv){
-document.getElementById("servicio").value = serv;
-window.scrollTo({top:1000, behavior:'smooth'});
-}
-
-/* RESERVA */
+/* VALIDACIÓN PRO */
 function reservar(){
+
 let serv = document.getElementById("servicio").value;
 let fecha = document.getElementById("fecha").value;
 let hora = document.getElementById("hora").value;
+let msg = document.getElementById("msg");
 
 if(!serv || !fecha || !hora){
-alert("Completa los datos");
+msg.innerHTML="⚠️ Completa todos los campos";
 return;
 }
 
-let mensaje = `Hola quiero reservar:
-Servicio: ${serv}
-Fecha: ${fecha}
-Hora: ${hora}`;
+let dia = new Date(fecha).getDay();
 
-window.open("https://wa.me/59172685867?text=" + encodeURIComponent(mensaje));
+/* 0 domingo, 6 sábado */
+if(dia==0 || dia==6){
+msg.innerHTML="❌ No atendemos sábados ni domingos";
+return;
 }
+
+/* HORARIO */
+let h = hora.split(":")[0];
+
+if(h < 9 || h >= 19){
+msg.innerHTML="⏰ Horario: 09:00 a 19:00";
+return;
+}
+
+/* MENSAJE PRO VENTA */
+let texto = `Hola Stylos Smith Study, quiero agendar cita:
+
+✨ Servicio: ${serv}
+📅 Fecha: ${fecha}
+⏰ Hora: ${hora}
+
+Quedo atento a confirmación. Gracias.`;
+
+/* ENVÍO */
+window.open("https://wa.me/59172685867?text="+encodeURIComponent(texto));
+
+}
+
 </script>
 
 </body>
